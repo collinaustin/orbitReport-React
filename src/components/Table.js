@@ -2,6 +2,13 @@ import styles from './styling.css';
 
 const Table = ({ sat }) => {
 
+function status(isOperational) {
+  if(isOperational){
+    return "Operational";
+  }
+  return "Not Operational";
+}
+
   return (
       <table>
        <thead>
@@ -18,7 +25,7 @@ const Table = ({ sat }) => {
             <td>{data.name}</td>
             <td>{data.type}</td>
             <td>{data.launchDate}</td>
-            <td>{data.operational}</td>
+            <td>{status(data.operational)}</td>
         </tr>
         ))}
         </tbody>
