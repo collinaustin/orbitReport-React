@@ -2,6 +2,7 @@ import styles from './styling.css';
 
 const Table = ({ sat }) => {
 
+// conditonal code for status
 function status(isOperational) {
   if(isOperational){
     return "Operational";
@@ -20,6 +21,7 @@ function status(isOperational) {
         </tr>
         </thead>
         <tbody>
+        {/* loops through sat array by orbit type and displays values */}
           {sat.map((data, id) => (
           <tr key={id}>
             <td>{data.name}</td>
